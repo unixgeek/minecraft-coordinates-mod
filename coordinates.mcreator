@@ -1,0 +1,48 @@
+{
+  "mod_elements": [
+    {
+      "name": "Coordinates",
+      "type": "overlay",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "coordinates"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "coords",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {}
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "coordinates",
+    "modName": "coordinates",
+    "version": "1.0.0",
+    "description": "Show coordinates on screen.",
+    "author": "Gunter Wambaugh",
+    "websiteURL": "https://github.com/unixgeek/minecraft-coordinates-mod",
+    "license": "MIT License",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.17.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.coordinates",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100354000
+}

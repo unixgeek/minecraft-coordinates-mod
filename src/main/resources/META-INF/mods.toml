@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[37,)"
+license="MIT License"
+
+[[mods]]
+modId="coordinates"
+version="1.0.0"
+displayName="coordinates"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+displayURL="https://github.com/unixgeek/mod-coordinates"
+authors="Gunter Wambaugh"
+description='''
+Show coordinates on screen.
+'''
+
+[[dependencies.coordinates]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.17.1]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

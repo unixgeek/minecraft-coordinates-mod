@@ -1,0 +1,41 @@
+name: Gradle Package
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 16
+      uses: actions/setup-java@v2
+      with:
+        java-version: '16'
+        distribution: 'temurin'
+        server-id: github
+        settings-path: ${{ github.workspace }}
+
+    - name: Build with Gradle
+      uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
+      with:
+        arguments: build
+
+    - name: Set Artifact Name
+      run: echo ${{ github.repository }} | sed 's/.*\//artifact=/' >> $GITHUB_ENV
+
+    - name: Copy Artifact
+      run: cp build/reobfJar/output.jar ${{ env.artifact }}.jar
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+      with:
+        files: ${{ env.artifact }}.jar
