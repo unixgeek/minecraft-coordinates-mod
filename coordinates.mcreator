@@ -28,7 +28,7 @@
   "workspaceSettings": {
     "modid": "coordinates",
     "modName": "coordinates",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Show coordinates on screen.",
     "author": "Gunter Wambaugh",
     "websiteURL": "https://github.com/unixgeek/minecraft-coordinates-mod",
@@ -39,10 +39,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.17.1",
+    "currentGenerator": "forge-1.18.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.coordinates",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100354000
+  "mcreatorVersion": 202200120510
 }
